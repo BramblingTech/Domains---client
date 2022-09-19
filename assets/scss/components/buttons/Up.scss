@@ -1,0 +1,39 @@
+.go-up {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  border: 1px solid $blue;
+  background-color: $b_default;
+  color: $blue;
+  font-size: 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.2s;
+
+  @media(max-width: 1560px) {
+      bottom: 120px;
+  }
+
+  @include _990 {
+    right: 50px;
+    bottom: 140px;
+  }
+  @include _575 {
+    right: 16px;
+  }
+
+  &:hover {
+    background-color: $blue;
+    color: $b_default;
+  }
+
+  &:active {
+    transform: translateY(-5px);
+  }
+}

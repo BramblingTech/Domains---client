@@ -1,0 +1,72 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $c_text;
+  font-size: 16px;
+  line-height: 160%;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h6 {
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 62px;
+  line-height: 74px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  @include _1100 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 62px;
+    letter-spacing: 0.04em;
+  }
+  @include _575{
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+h2 {
+  font-size: 52px;
+  line-height: 62px;
+  letter-spacing: 0.04em;
+  @include _1100 {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+  }
+  @include _575{
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+h3 {
+  font-size: 42px;
+  line-height: 50px;
+  letter-spacing: 0.04em;
+  @include _1100{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+  }
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
+}

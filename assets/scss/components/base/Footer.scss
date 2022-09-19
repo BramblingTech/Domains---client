@@ -1,0 +1,68 @@
+footer {
+  .box {
+    padding: 16px 0;
+  }
+
+  .top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include _575 {
+      display: block;
+    }
+
+    .logo {
+      @media(max-width: 1200px) {
+        margin-left: 50px;
+      }
+      @include _1100 {
+        margin-left: 0;
+      }
+      @include _990 {
+        margin-left: 50px;
+      }
+      @include _575 {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 34px;
+        margin-left: 0;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      @include _575 {
+        justify-content: space-between;
+      }
+
+      & > * {
+        font-weight: 600;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s;
+
+        &.active {
+          color: $blue;
+        }
+
+        &:hover {
+          color: $blue;
+          border-bottom-color: $blue;
+        }
+      }
+
+      & > *:last-child {
+        margin-left: 54px;
+      }
+    }
+  }
+
+  .bottom-part {
+    margin-top: 34px;
+    @include _1100 {
+      text-align: center;
+    }
+  }
+}

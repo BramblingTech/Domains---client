@@ -1,0 +1,82 @@
+.websites__europaw {
+  span {
+    font-weight: 600;
+    margin-top: 16px;
+    display: block;
+  }
+
+  h4 {
+    margin-top: 34px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    @include _1100{
+      margin-top:44px;
+    }
+  }
+
+  p.border {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $skyblue;
+  }
+
+  .two-column-content {
+    .statistic {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .item {
+        display: flex;
+        margin-top: 24px;
+        width: 50%;
+        h4 {
+          color: $blue;
+        }
+
+        p {
+          margin-top: 0;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .two-column-content:first-of-type {
+    .right {
+      & > * {
+        width: 48%;
+      }
+
+    }
+
+    p:first-of-type {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $skyblue;
+    }
+  }
+
+  .two-column-content:last-of-type {
+    margin-top: 54px;
+
+    .right {
+      display: block;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    img{
+      @include _1100{
+        width:100%;
+      }
+    }
+  }
+}

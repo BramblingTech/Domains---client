@@ -1,0 +1,44 @@
+header {
+  background-color: $b_default;
+
+  .container {
+
+    height: 74px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include _990 {
+      height: 54px;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .go-back {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        span {
+          color: $blue;
+        }
+
+        svg path {
+          fill: $blue;
+        }
+      }
+
+      span {
+        font-weight: 600;
+        line-height: 22px;
+        display: block;
+        margin-left: 8px;
+      }
+    }
+  }
+}

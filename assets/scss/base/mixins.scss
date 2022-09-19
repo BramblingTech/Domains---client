@@ -1,0 +1,26 @@
+/* -------------- BREAKPOINTS --------------*/
+
+@mixin _1366 {
+  @media(max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin _990 {
+  @media(max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin _1100 {
+  @media(max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin _575 {
+  @media(max-width: 575px) {
+    @content;
+  }
+}
+

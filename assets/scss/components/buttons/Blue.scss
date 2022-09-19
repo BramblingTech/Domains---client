@@ -1,0 +1,37 @@
+.btn-blue > * {
+  font-family: "Open Sans", sans-serif;
+  background-color: $blue;
+  border-radius: 4px;
+  color: $b_default;
+  font-size: 16px;
+  font-weight: 600;
+  width: 280px;
+  height: 58px;
+  transition: .25s ease;
+
+  &:hover {
+    background-color: $lightBlue;
+  }
+
+}
+
+.filter__buttons {
+  .btn-blue {
+    @include _575 {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    & > * {
+      margin-left: 24px;
+      width: 160px;
+      height: 44px;
+      @include _575 {
+        width: 91%;
+        margin-left: 0;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,33 @@
+.btn-primary > * {
+  background-color: $blue;
+  border-radius: 0px 8px 8px 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  color: $b_default;
+  width: 137px;
+  height: 72px;
+  transition: 0.25s ease;
+
+  &:hover {
+    background-color: $lightBlue;
+  }
+
+  @include _575 {
+    height: 54px;
+    width: 74px;
+    font-weight: normal;
+  }
+}
+
+.page-buy {
+  .btn-primary > * {
+    background-color: #D1D0FF;
+    color: $blue;
+
+    &:hover {
+      background-color: #B7B5FF;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+
+.page-article {
+  &__content {
+    width: 73%;
+    padding-bottom: $margin_section;
+    padding-top: 150px;
+    opacity: 0;
+    transition: 0.3s ease;
+    transition-property: opacity;
+    @include _1100 {
+      width: 100%;
+      padding-top: 100px;
+    }
+
+    &.show {
+      opacity: 1;
+    }
+
+    & > p:first-child {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+
+      &:not(:first-of-type) {
+        margin-top: 120px;
+        @include _1100 {
+          margin-top: 100px;
+        }
+      }
+    }
+
+    h4 {
+      margin-top: 40px;
+    }
+
+    ol {
+      li {
+        margin-top: 24px;
+      }
+    }
+
+    img {
+      margin-top: 44px;
+    }
+
+    a {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+    }
+
+    ul.dots li {
+      display: block;
+      position: relative;
+      margin-left: 20px;
+      &:before {
+        width: 8px;
+        height: 8px;
+        left:-20px;
+        top:50%;
+        transform:translateY(-50%);
+        position: absolute;
+      }
+    }
+  }
+
+}

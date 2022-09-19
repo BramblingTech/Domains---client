@@ -1,0 +1,51 @@
+.page-article__contents {
+  max-width: 50%;
+  z-index: 2;
+  width: 25%;
+  margin-top: 260px;
+  @include _1100{
+    width: 70%;
+    margin:44px auto 0 auto;
+    max-width: 100%;
+  }
+  @include _575 {
+    width:100%;
+  }
+
+  .contents-wrapper {
+    border: 1px solid $skyblue;
+    padding: 17px;
+    background-color: $b_default;
+    border-radius: 10px;
+    position: sticky;
+    top: 30px;
+    @include _1100{
+      position: static;
+    }
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  ul.dots li {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 160%;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+      color:$blue;
+    }
+
+    &:before {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      min-height: 8px;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+  }
+}

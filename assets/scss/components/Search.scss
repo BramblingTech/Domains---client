@@ -1,0 +1,190 @@
+@import "../base/mixins.scss";
+
+.search {
+  &__input {
+    display: flex;
+    position: relative;
+
+    svg path {
+      transition: 0.2s;
+    }
+
+    input {
+      background: $b_default;
+      border-radius: 8px 0px 0px 8px;
+      width: 100%;
+      border: 1px solid transparent;
+      font-size: 16px;
+      padding-left: 48px;
+      transition: 0.2s;
+
+
+      &:active, &:focus {
+        border-color: $blue;
+
+        & ~ svg path {
+          fill: $blue;
+        }
+      }
+
+      &::placeholder {
+        color: $gray;
+        @include _575 {
+          font-size: 12px;
+        }
+      }
+
+      @include _575 {
+        padding-left: 40px;
+      }
+      @media(max-width: 450px) {
+        padding-right: 30%;
+      }
+      @media(max-width: 400px) {
+        padding-right: 35%;
+
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include _575 {
+        left: 8px;
+      }
+    }
+  }
+
+  &__keywords {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    border-bottom: 1px solid $c_text;
+    padding-bottom: 5px;
+    @include _1366 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .search-keywords__item {
+      margin-left: 24px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .1s;
+      @include _1366 {
+        line-height: 34px;
+      }
+
+      &:hover:not(.active) {
+        color: $blue;
+      }
+
+      &.active {
+
+        opacity: 0.7;
+      }
+    }
+
+    span {
+      display: block;
+      @include _575 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__business {
+    width: 100%;
+    margin-top: 16px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+
+    .business-trigger {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+
+      span {
+        transition: 0.2s;
+      }
+
+      &:hover {
+        span {
+          color: $blue;
+        }
+
+        svg path {
+          fill: $blue;
+        }
+      }
+
+      svg {
+        transition: .3s ease-out;
+        margin-left: 6px;
+      }
+
+      &.active {
+        span {
+          color: $blue;
+        }
+
+        svg {
+          path {
+            fill: $blue;
+          }
+
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .business-list {
+      position: absolute;
+      background-color: $b_default;
+      border: 1px solid #D1D0FF;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 45px 17px 24px;
+      max-width: 635px;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      z-index: -1;
+      transition: .3s ease-out;
+      transition-property: z-index, opacity, top;
+      @include _575 {
+        width: 100%;
+      }
+
+      &.show {
+        top: 30px;
+        opacity: 1;
+        z-index: 2;
+
+      }
+
+      &__item {
+        margin-top: 11px;
+        margin-left: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 5px;
+
+        &.active {
+          color: $b_default;
+          background-color: $blue;
+        }
+      }
+    }
+
+  }
+}

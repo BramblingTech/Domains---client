@@ -1,0 +1,39 @@
+.btn-border > * {
+  border: 1px solid $blue;
+  color: $blue;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  border-radius: 4px;
+  width: 232px;
+  height: 46px;
+  transition: 0.25s ease;
+
+  &:hover {
+    background: $blue;
+    border: 1px solid $blue;
+    color: $b_default;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: no-drop;
+  }
+}
+
+.filter__buttons {
+  .btn-border {
+    @include _575 {
+      width: 100%;
+    }
+
+    & > * {
+      width: 160px;
+      height: 44px;
+      @include _575 {
+        width: 91%;
+      }
+    }
+  }
+
+}

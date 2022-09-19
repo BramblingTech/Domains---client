@@ -1,0 +1,97 @@
+.filter {
+  h4 {
+    text-align: center;
+  }
+
+  &__endings {
+    margin-top: 34px;
+
+    .choose-all {
+      p {
+        margin-top: 0;
+        margin-right: 24px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .custom-checkbox:first-of-type {
+        margin-right: 15px;
+        @include _575 {
+          margin: 20px 0 10px 0;
+        }
+      }
+
+      @include _575 {
+        display: block;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .table-of-endings {
+      padding: 0 17px 17px 17px;
+      border: 1px solid $skyblue;
+      border-radius: 10px;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-column-gap: 24px;
+      align-items: center;
+      overflow: auto;
+      height: 160px;
+      flex-wrap: wrap;
+
+      .custom-checkbox {
+        margin-top: 20px;
+
+      }
+    }
+  }
+
+  &__price {
+    p {
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 34px;
+    }
+
+    .price-values {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+
+      .separator {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      input {
+        border-radius: 4px;
+        border: 1px solid $skyblue;
+        width: 160px;
+        height: 44px;
+        text-align: center;
+        background-color: $b_default;
+        @include _575 {
+          width: 100%;
+        }
+      }
+    }
+
+
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 44px;
+    @include _575 {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

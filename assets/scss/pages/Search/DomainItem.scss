@@ -1,0 +1,39 @@
+.domain-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $skyblue;
+  padding: 5px 17px;
+  border-radius: 8px;
+  @include _575{
+    overflow: auto;
+  }
+  &:not(:first-of-type) {
+    margin-top:24px;
+  }
+  &__info {
+    .title {
+      display: flex;
+
+      .text {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .text-2 {
+        font-size: 14px;
+        margin-left:6px;
+      }
+    }
+  }
+  .btn-skyblue > * {
+    color: $blue;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    @include _575{
+      width: 84px;
+      margin-left: 10px;
+    }
+  }
+}

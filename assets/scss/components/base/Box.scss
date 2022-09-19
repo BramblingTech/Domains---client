@@ -1,0 +1,28 @@
+.box {
+  background-color: $b_green;
+  width: 100%;
+  position: relative;
+
+  &.left-bottom {
+    border-radius: 0px 0px 0px 100px;
+    @include _1100 {
+      border-radius: 0px 0px 0px 50px;
+    }
+
+  }
+
+  &.left-top-right-bottom {
+    border-radius: 100px 0px;
+    @include _1100 {
+      border-radius: 50px 0px;
+    }
+  }
+
+  &.left-top {
+    border-radius: 100px 0px 0px 0px;
+    @include _1100 {
+      border-radius: 50px 0px 0px 0px;
+    }
+  }
+
+}
